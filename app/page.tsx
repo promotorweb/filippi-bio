@@ -15,6 +15,7 @@ export default function HomePage() {
   return (
     <div className="bg-particles relative min-h-screen w-full overflow-x-hidden flex flex-col items-center justify-center px-6 py-12 page-fade">
       <div className="relative z-10 flex flex-col items-center gap-5 w-full max-w-sm">
+        
         <div className="glow-ring-subtle float-anim">
           <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-accent/30 shadow-2xl">
             <Image
@@ -43,59 +44,40 @@ export default function HomePage() {
         </p>
 
         <div className="w-full flex flex-col gap-3 mt-1">
-          <Link
-            href="/demonstracao"
-            className="premium-btn pulse-btn w-full py-3.5 sm:py-4 px-6 flex items-center justify-center gap-2.5 text-sm sm:text-base"
-          >
+          <Link href="/demonstracao" className="premium-btn pulse-btn w-full py-4 flex items-center justify-center gap-2">
             <Eye size={18} />
             Ver Demonstracao (como funciona)
           </Link>
-          <Link
-            href="/sites"
-            className="premium-btn-secondary w-full py-3.5 sm:py-4 px-6 flex items-center justify-center gap-2.5 text-sm sm:text-base"
-          >
+
+          <Link href="/sites" className="premium-btn-secondary w-full py-4 flex items-center justify-center gap-2">
             <LayoutGrid size={18} />
             Ver Modelos prontos
           </Link>
         </div>
 
-        <p className="text-[11px] sm:text-xs text-muted-foreground/70 text-center fade-in-delay-2">
+        <p className="text-xs text-muted-foreground/70 text-center">
           leva menos de 30 segundos pra entender
         </p>
 
         <div className="flex items-center justify-center gap-8 mt-2">
-          <div className="flex flex-col items-center gap-1.5">
-            <button
-              onClick={() => setShowInstagramPopup(true)}
-              aria-label="Instagram"
-              className="social-btn"
-            >
-              <FaInstagram size={20} className="text-white" />
+          <div className="flex flex-col items-center">
+            <button onClick={() => setShowInstagramPopup(true)} className="social-btn">
+              <FaInstagram size={20} />
             </button>
-            <span className="text-[10px] sm:text-xs text-muted-foreground">Ver perfil</span>
+            <span className="text-xs">Ver perfil</span>
           </div>
-          <div className="flex flex-col items-center gap-1.5">
-            <a
-              href={SITE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Site"
-              className="social-btn"
-            >
-              <Globe size={20} className="text-white" />
+
+          <div className="flex flex-col items-center">
+            <a href={SITE_URL} target="_blank" className="social-btn">
+              <Globe size={20} />
             </a>
-            <span className="text-[10px] sm:text-xs text-muted-foreground">Ver exemplo real</span>
+            <span className="text-xs">Ver exemplo real</span>
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-1 mt-3 fade-in-delay-3">
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <Sparkles size={14} className="text-[#00D4FF]" />
-            <span className="text-xs sm:text-sm font-medium">+ de 20 modelos criados</span>
-          </div>
-          <span className="text-[10px] sm:text-xs text-muted-foreground/60">
-            usado por negocios locais
-          </span>
+        <div className="flex flex-col items-center mt-3">
+          <span className="text-sm">+ de 20 modelos criados</span>
+          <span className="text-xs text-muted-foreground">usado por negocios locais</span>
         </div>
       </div>
 
